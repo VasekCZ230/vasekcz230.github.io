@@ -156,6 +156,17 @@
         });
     </script>
     <script>
+        // Funkce pro načtení počtu návštěv přes AJAX
+        function loadCounter() {
+            fetch('../php/counter.php')
+                .then(response => response.text())
+                .then(count => {
+                    document.getElementById('visit-count').innerText = count;
+                })
+                .catch(error => console.error('Chyba načítání počítadla:', error));
+        }
+    </script>
+    <script>
         function clockPage() {
             const ampm = document.getElementById("ampm-link").textContent;
             window.location.href = ampm === "AM"
