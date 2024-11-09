@@ -1,28 +1,22 @@
 <?php 
 
-$filename = "count.txt";// the text file to store count
-// Open the file foe reading current count
-$fp = fopen($filename, 'r');
+$filename = "count.txt"; // Textový soubor pro uložení počtu návštěv
 
-//Get exiting count
-$count = fread($fp, filesize($filename));
+// Zkontrolujeme, zda soubor existuje, pokud ne, vytvoříme ho s počáteční hodnotou 0
+if (!file_exists($filename)) {
+    file_put_contents($filename, "0");
+}
 
-//close file
-fclose($fp);
+// Načtení aktuálního počtu návštěv
+$count = (int)file_get_contents($filename);
 
-//Add 1 to the existing count
-$count = $count +1;
+// Zvýšení počtu návštěv o 1
+$count++;
 
-//Display the number of hits
-echo "<p>Total amount of Hits:" . $count. "</p>";
+// Zobrazení počtu návštěv
+echo "<p>Total amount of Hits: " . $count . "</p>";
 
-//Reopen to modify content
-$fp = fopen($filename, 'w');
-
-//write the new count to file
-fwrite($fp, $count);
-
-//close file
-fclose($fp);
+// Uložení nového počtu návštěv zpět do souboru
+file_put_contents($filename, $count);
 
 ?>
