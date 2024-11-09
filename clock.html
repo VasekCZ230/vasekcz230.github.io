@@ -1,0 +1,123 @@
+<!--© 2024 VasekCZ230 - All rights reserved.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VasekCZ230 - Clock</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css?v=2.2.6">
+    <script src="../js/clock.js" defer></script>
+
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background: url("../img/background.png") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 700px;
+            margin: 38px auto;
+            background-color: #bfe1ff;
+            border: none;
+            padding: 5px;
+        }
+        #header {
+            background-color: #5aafff;
+            color: #eaf5ff;
+            text-align: center;
+            padding: 5px;
+            font-size: 20px;
+            font-style: italic;
+        }
+        #menu {
+            width: 100px;
+            background-color: #80c2ff;
+            padding: 5px;
+            color: #eaf5ff;
+            vertical-align: top;
+        }
+        #menu a {
+            display: block;
+            padding: 8px 0;
+            color: #eaf5ff;
+            text-decoration: none;
+        }
+        #menu a:hover {
+            background-color: #95cdff;
+            color: #eaf5ff;
+        }
+        #content {
+            padding: 20px;
+            background-color: #eaf5ff;
+	    color: #4a4d7c;
+            font-size: 18px;
+        }
+        #footer {
+            background-color: #5aafff;
+            color: #eaf5ff;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Clock</h1>
+        </div>
+        <table cellspacing="0" cellpadding="0">
+            <tr>
+                <td id="menu">
+                    <h3 style="text-align: center;">Menu</h3>
+                    <a href="https://vasekcz230.neocities.org/home">&bull; Home</a>
+                    <a href="https://vasekcz230.neocities.org/files">&bull; Files</a>
+                    <a href="https://vasekcz230.neocities.org/games">&bull; Games</a>
+                    <a href="https://vasekcz230.neocities.org/programs">&bull; Programs</a>
+                    <a href="https://vasekcz230.neocities.org/about">&bull; About</a>
+                </td>
+                <td id="content">
+                    <h1 id="currentTime" style="margin: 0 auto; text-align: center;">
+                        <span id="current-time"></span>
+                        <span id="ampm-link"></span>
+                    </h1>
+                    <img src="../img/packupscale.png" width="100%" height="auto">
+                    <p>You found an easter egg! Great job! Here is your <a href="https://vasekcz230.neocities.org/maze">reward</a>. If you are on mobile, <a href="https://vasekcz230.neocities.org/mobile/maze">click here</a>.</p>
+                </td>
+            </tr>
+        </table>
+        <div id="footer">
+            <p>&copy; 2024 VasekCZ230 - All rights reserved.</p>
+            <a href="https://vasekcz230.neocities.org/home" style="color: #eaf5ff;">Home</a> | 
+            <a href="https://vasekcz230.neocities.org/files" style="color: #eaf5ff;">Files</a> | 
+            <a href="https://vasekcz230.neocities.org/games" style="color: #eaf5ff;">Games</a> | 
+            <a href="https://vasekcz230.neocities.org/programs" style="color: #eaf5ff;">Programs</a> | 
+            <a href="https://vasekcz230.neocities.org/about" style="color: #eaf5ff;">About</a>
+        </div>
+    </div>
+    <script>
+        function checkSparkleCursor() {
+            const currentHour = new Date().getHours();
+            const shouldActivate = (currentHour >= 22 || currentHour < 2);
+            const existingScript = document.querySelector('script[src="../js/sparklecursor.js"]');
+            if (shouldActivate && !existingScript) {
+                const script = document.createElement('script');
+                script.src = '../js/sparklecursor.js';
+                document.head.appendChild(script);
+            } else if (!shouldActivate && existingScript) {
+                existingScript.remove();
+            }
+        }
+        checkSparkleCursor();
+    </script>
+</body>
+</html>
+

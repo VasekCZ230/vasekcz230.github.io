@@ -1,0 +1,183 @@
+<!--© 2024 VasekCZ230 - All rights reserved.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VasekCZ230 - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css?v=2.2.6">
+    <script src="../js/clock.js" defer></script>
+    
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background: url("../img/background.png") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 700px;
+            margin: 38px auto;
+            background-color: #bfe1ff;
+            border: none;
+            padding: 5px;
+        }
+        #header {
+            background-color: #5aafff;
+            color: #eaf5ff;
+            text-align: center;
+            padding: 5px;
+            font-size: 20px;
+            font-style: italic;
+        }
+        #menu {
+            width: 100px;
+            background-color: #80c2ff;
+            padding: 5px;
+            color: #eaf5ff;
+            vertical-align: top;
+        }
+        #menu a {
+            display: block;
+            padding: 8px 0;
+            color: #eaf5ff;
+            text-decoration: none;
+        }
+        #menu a:hover {
+            background-color: #95cdff;
+            color: #eaf5ff;
+        }
+        #content {
+            padding: 20px;
+            background-color: #eaf5ff;
+            color: #4a4d7c;
+            font-size: 18px;
+        }
+        #footer {
+            background-color: #5aafff;
+            color: #eaf5ff;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+        }
+        #web-buttons a {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        #web-buttons img {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 0;
+            vertical-align: middle;
+            border: none;
+        }
+        #current-time {
+            font-size: 16px;
+            color: #eaf5ff;
+        }
+        #ampm-link {
+            color: #eaf5ff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #ampm-link:hover {
+            background-color: #80c2ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Welcome to website of VasekCZ230!</h1>
+        </div>
+        <table cellspacing="0" cellpadding="0">
+            <tr>
+                <td id="menu">
+                    <h3 style="text-align: center;">Menu</h3>
+                    <a href="https://vasekcz230.neocities.org/home" style="font-weight: bold;">&bull; Home</a>
+                    <a href="https://vasekcz230.neocities.org/files">&bull; Files</a>
+                    <a href="https://vasekcz230.neocities.org/games">&bull; Games</a>
+                    <a href="https://vasekcz230.neocities.org/programs">&bull; Programs</a>
+                    <a href="https://vasekcz230.neocities.org/about">&bull; About</a>
+                    <p id="currentTime">
+                        <span id="current-time"></span>
+                        <span id="ampm-link" onclick="clockPage()"></span>
+                    </p>
+                </td>
+                <td id="content">
+                    <h4>Hello, this is my page with some cool stuff!</h4>
+                    <p>Try find 5 easter eggs.</p>
+                    <p>Visit my website at midnight and something magical will happen. :)</p>
+                    <img src="../img/packupscale.png" width="100%" height="auto">
+                    <div id="web-buttons" style="text-align: center;">
+                        <marquee>
+                            <img src="../img/webbuttons/plane.gif" id="plane" width="88" height="31">
+                            <a href="https://neocities.org"><img src="../img/webbuttons/neocities.gif" width="88" height="31"></a>
+                            <img src="../img/webbuttons/800x600.gif" width="88" height="31">
+                            <a href="https://adobe.com/acrobat.html"><img src="../img/webbuttons/acrobat.gif" width="88" height="31"></a>
+                            <img src="../img/webbuttons/msnotepad.gif" width="88" height="31">
+                            <a href="https://isp.netscape.com"><img src="../img/webbuttons/netnow.gif" width="88" height="31"></a>
+                            <img src="../img/webbuttons/www.gif" width="88" height="31">
+                            <a href="https://java.com"><img src="../img/webbuttons/getjava.gif" width="88" height="31"></a>
+                            <img src="../img/webbuttons/msie.gif" width="88" height="31">
+                            <a href="https://www.irfanview.com"><img src="../img/webbuttons/irfanview.gif" width="88" height="31"></a>
+                            <img src="../img/webbuttons/igts.gif" width="88" height="31">
+                        </marquee>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div id="footer">
+            <p>&copy; 2024 VasekCZ230 - All rights reserved.</p>
+            <a href="https://vasekcz230.neocities.org/home" style="color: #eaf5ff; font-weight: bold;">Home</a> | 
+            <a href="https://vasekcz230.neocities.org/files" style="color: #eaf5ff;">Files</a> | 
+            <a href="https://vasekcz230.neocities.org/games" style="color: #eaf5ff;">Games</a> | 
+            <a href="https://vasekcz230.neocities.org/programs" style="color: #eaf5ff;">Programs</a> |  
+            <a href="https://vasekcz230.neocities.org/about" style="color: #eaf5ff;">About</a>
+        </div>
+    </div>
+    <audio autoplay><source src="https://raw.githubusercontent.com/Vasek230CZ/WebFiles/main/startup.mp3" type="audio/mp3"></audio>
+    <audio autoplay><source src="https://raw.githubusercontent.com/Vasek230CZ/WebFiles/main/startup.ogg" type="audio/ogg"></audio>
+    <audio id="planeSound"><source src="https://raw.githubusercontent.com/Vasek230CZ/WebFiles/main/plane.mp3" type="audio/mp3"></audio>
+    <audio id="planeSound"><source src="https://raw.githubusercontent.com/Vasek230CZ/WebFiles/main/plane.ogg" type="audio/ogg"></audio>
+    <script>
+        var plane = document.getElementById('plane');
+        var planeSound = document.getElementById('planeSound');
+        plane.addEventListener('click', function() {
+            planeSound.play();
+        });
+    </script>
+    <script>
+        function clockPage() {
+            const ampm = document.getElementById("ampm-link").textContent;
+            window.location.href = ampm === "AM"
+                ? "https://vasekcz230.neocities.org/clock"
+                : "https://vasekcz230.neocities.org/rickroll";
+        }
+    </script>
+    <script>
+        function checkSparkleCursor() {
+            const currentHour = new Date().getHours();
+            const shouldActivate = (currentHour >= 22 || currentHour < 2);
+            const existingScript = document.querySelector('script[src="../js/sparklecursor.js"]');
+            if (shouldActivate && !existingScript) {
+                const script = document.createElement('script');
+                script.src = '../js/sparklecursor.js';
+                document.head.appendChild(script);
+            } else if (!shouldActivate && existingScript) {
+                existingScript.remove();
+            }
+        }
+        checkSparkleCursor();
+    </script>
+</body>
+</html>
