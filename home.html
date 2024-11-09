@@ -117,7 +117,7 @@
                     <h4>Hello, this is my page with some cool stuff!</h4>
                     <p>Try find 5 easter eggs.</p>
                     <p>Visit my website at midnight and something magical will happen. :)</p>
-                    <p>Visits Count: <span id="visitsCount">Loading...</span></p>
+                    <p>Visits Count: <span id="visitCount">Loading...</span></p>
                     <img src="../img/packupscale.png" width="100%" height="auto">
                     <div id="web-buttons" style="text-align: center;">
                         <marquee>
@@ -163,6 +163,23 @@
                 ? "https://vasekcz230.neocities.org/clock"
                 : "https://vasekcz230.neocities.org/rickroll";
         }
+    </script>
+    <script>
+        // Function to fetch the visit count from counter.php
+        async function updateVisitCount() {
+            try {
+                const response = await fetch('counter.php');
+                const data = await response.json();
+                // Display the visitor count on the page
+                document.getElementById('visitorCount').innerText = data.count;
+            } catch (error) {
+                console.error('Error fetching visitor count:', error);
+                document.getElementById('visitCount').innerText = 'Error';
+            }
+        }
+
+        // Update visitor count on page load
+        updateVisitorCount();
     </script>
     <script>
         function checkSparkleCursor() {
