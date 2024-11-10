@@ -7,5 +7,4 @@ print $count;
 fseek($handle, 0) ;
 fwrite($handle, $count) ;
 fclose($handle) ;
-
 ?>
