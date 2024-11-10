@@ -1,5 +1,5 @@
 <?php
-$db="count.txt";
+$count="count.txt";
 $handle=fopen($count, 'r+');
 $data=fread($handle, 512);
 $count=$data + 1;
