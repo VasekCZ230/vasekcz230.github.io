@@ -117,11 +117,6 @@
                     <h4>Hello, this is my page with some cool stuff!</h4>
                     <p>Try find 5 easter eggs.</p>
                     <p>Visit my website at midnight and something magical will happen. :)</p>
-                    <h1>Počet návštěv:</h1>
-                    <p>
-                        <?php include 'count.php'; ?>
-                    </p>
-                    <p>Visits count: <span id="visit-count"></span></p>
                     <img src="../img/packupscale.jpg" width="100%" height="auto">
                     <div id="web-buttons" style="text-align: center;">
                         <marquee>
@@ -159,17 +154,6 @@
         plane.addEventListener('click', function() {
             planeSound.play();
         });
-    </script>
-    <script>
-        // Funkce pro načtení počtu návštěv přes AJAX
-        function loadCounter() {
-            fetch('../php/counter/counter.php')
-                .then(response => response.text())
-                .then(count => {
-                    document.getElementById('visit-count').innerText = count;
-                })
-                .catch(error => console.error('Error:', error));
-        }
     </script>
     <script>
         function clockPage() {
