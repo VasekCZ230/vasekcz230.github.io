@@ -1,3 +1,3 @@
 This is website of VasekCZ230.
 
-© VasekCZ230 - All rights reserved.
+© 2024 VasekCZ230 - All rights reserved.
