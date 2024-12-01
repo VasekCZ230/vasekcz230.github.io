@@ -1,5 +1,3 @@
-<script type="text/javascript">
-// <![CDATA[
 var speed=33; // lower number for faster
 var flakes=100; // number of flakes
 var colour="#96c"; // colour of flakes
@@ -131,5 +129,3 @@ function let_it_snow(c) {
   if (o>flakes*slush) for (i=0; i<slsh.length; i++) if (slsh[i]>3) slsh[i]--;
   if (z || o>flakes*slush) set_width();
 }
-// ]]>
-</script>
