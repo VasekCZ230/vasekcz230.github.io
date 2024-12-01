@@ -1,6 +1,6 @@
 var speed=33; // lower number for faster
 var flakes=100; // number of flakes
-var colour="#e3f2fd"; // colour of flakes
+var colour="white"; // colour of flakes
 var slush=20; // set to '0' for no slush or otherwise set to height at which slush melts
 var over_or_under="over"; // set to "over" for snow to always be on top, or "under" to allow it to float behind other objects
 
