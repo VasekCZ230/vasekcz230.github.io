@@ -13,3 +13,5 @@ echo "{$count} hits\n";
 $file = fopen( $path, 'w' );
 fwrite( $file, $count );
 fclose( $file );
+
+?>
