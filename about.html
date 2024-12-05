@@ -83,7 +83,6 @@
     <link rel="stylesheet" href="../css/style.css?v=2.3.0.xmas.1">
     <script src="../js/clock.js" defer></script>
     <script src="../js/snow.js" defer></script>
-    <?php include( '/path/to/counter.php' ); ?>
 
     <style>
         body {
@@ -169,7 +168,6 @@
                     <p>My web is compatible with versions of browsers: Internet Explorer: 11 (Not all content will be displayed.), Edge: 80, Chrome: 59, Firefox: 52, Opera: 49, Safari: 11.1.</p>
                     <p>Started: 6.6.2024</p>
                     <p>Last updated (MM.DD.YYYY): 12.5.2024
-                    <p>Visits: <span id="visitorCount">Loading...</span></p>
                     <p>Actual version: r2.3.0.xmas</p>
                     <h4>Button</h4>
                     <p>If you like my website, you can add a button to your own site. Add the code below to your website code.</p>
@@ -213,17 +211,6 @@
             }
         }
         checkSparkleCursor();
-    </script>
-    <script>
-    fetch('../php/hitcounter.php')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('visitorCount').textContent = data;
-        })
-        .catch(error => {
-            console.error('Error while loading hitcounter:', error);
-            document.getElementById('visitorCount').textContent = "Cannot be loaded.";
-        });
     </script>
 </body>
 </html>
