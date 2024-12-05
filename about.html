@@ -215,14 +215,14 @@
         checkSparkleCursor();
     </script>
     <script>
-    fetch('hitcounter.php')
+    fetch('../php/hitcounter.php')
         .then(response => response.text())
         .then(data => {
             document.getElementById('visitorCount').textContent = data;
         })
         .catch(error => {
             console.error('Error while loading hitcounter:', error);
-            document.getElementById('visitorCount').textContent = "Cannot load.";
+            document.getElementById('visitorCount').textContent = "Cannot be loaded.";
         });
     </script>
 </body>
