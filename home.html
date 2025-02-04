@@ -224,6 +224,12 @@
     <audio autoplay><source src="../sfx/startup.ogg" type="audio/ogg"></audio>
     <audio id="planeSound"><source src="../sfx/plane.mp3" type="audio/mp3"></audio>
     <audio id="planeSound"><source src="../sfx/plane.ogg" type="audio/ogg"></audio>
+      <script>
+    let count = localStorage.getItem('hitCounter') || 0;
+    count++;
+    localStorage.setItem('hitCounter', count);
+    document.getElementById('counter').innerText = count;
+      </script>
     <script>
         var plane = document.getElementById('plane');
         var planeSound = document.getElementById('planeSound');
