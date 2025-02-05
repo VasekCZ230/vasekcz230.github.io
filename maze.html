@@ -80,7 +80,7 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../css/style.css?v=2.3.3">
+  <link rel="stylesheet" href="../css/style.css?v=2.3.3.1">
   <style>
     body, html {
       margin: 0;
@@ -189,7 +189,7 @@
           break;
         case 4:
           geometry = new THREE.PlaneGeometry(cubeSize, cubeSize);
-          material = new THREE.MeshLambertMaterial({ map: loader.load('../img/maze/smiley.png'), side: THREE.DoubleSide, transparent: true});
+          material = new THREE.MeshLambertMaterial({ map: loader.load('../img/maze/smiley.png'), side: THREE.DoubleSide, transparent: true, opacity: 0.75 });
           const flatObject4 = new THREE.Mesh(geometry, material);
           flatObject4.position.set(x * cubeSize, cubeSize / 2, z * cubeSize);
           flatObjects.push(flatObject4);
