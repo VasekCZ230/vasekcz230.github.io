@@ -80,9 +80,9 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css?v=2.4.1">
+    <link rel="stylesheet" href="../css/style.css?v=2.5.0">
 </head>
 <body>
-
+    <video autoplay playsinline><source src="https://vasekcz230.github.io/vid/rickroll.mp4" type="video/mp4">Your browser is not supported!</video>
 </body>
 </html>
