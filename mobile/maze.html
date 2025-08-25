@@ -73,14 +73,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VasekCZ230 - 3DMaze for mobile</title>
+  <script type='text/javascript'> 
+		title = "VasekCZ230's Website - 3D Maze for Mobile • ";
+		position = 0;
+		function scrolltitle() {
+    		document.title = title.substring(position, title.length) + title.substring(0, position); 
+    		position++;
+    		if (position > title.length) position = 0;
+    		titleScroll = window.setTimeout(scrolltitle,170);
+		}
+		scrolltitle();
+	</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../css/style.css?v=2.4.1">
+  <link rel="stylesheet" href="../css/style.css?v=2.5.0">
   <style>
     body, html {
       margin: 0;
