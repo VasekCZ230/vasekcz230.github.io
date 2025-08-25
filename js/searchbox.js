@@ -1,11 +1,10 @@
-<script>
 var pages = [
-  "home.html",
-  "projects.html",
-  "games.html",
-  "programs.html",
-  "other.html",
-  "about.html"
+  "/",
+  "/about/",
+  "/projects/",
+  "/games/",
+  "/programs/",
+  "/other/"
 ];
 
 function searchSite() {
