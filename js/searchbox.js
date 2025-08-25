@@ -1,10 +1,19 @@
 var pages = [
-  "/",
-  "/about/",
-  "/projects/",
-  "/games/",
-  "/programs/",
-  "/other/"
+  {
+    url: "/projects/",
+    anchors: [
+      {id: "section-1", title: "Project A"},
+      {id: "section-2", title: "Project B"},
+      {id: "section-3", title: "QR Code Generator"}
+    ]
+  },
+  {
+    url: "/about/",
+    anchors: [
+      {id: "section-1", title: "About me"},
+      {id: "section-2", title: "Contact info"}
+    ]
+  }
 ];
 
 function searchSite() {
