@@ -73,14 +73,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>VasekCZ230 - About</title>
+    <script type='text/javascript'> 
+		title = "VasekCZ230's Website - About • ";
+		position = 0;
+		function scrolltitle() {
+    		document.title = title.substring(position, title.length) + title.substring(0, position); 
+    		position++;
+    		if (position > title.length) position = 0;
+    		titleScroll = window.setTimeout(scrolltitle,170);
+		}
+		scrolltitle();
+	</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css?v=2.4.4">
+    <link rel="stylesheet" href="../css/style.css?v=2.5.0">
     <script src="../js/clock.js" defer></script>
 
     <style>
@@ -167,8 +177,8 @@
                     <p>Special thanks to GitHub for hosting my website!</p>
                     <p>My web is compatible with versions of browsers: Internet Explorer: 11 (Not all content will be displayed.), Edge: 80, Chrome: 59, Firefox: 52, Opera: 49, Safari: 11.1.</p>
                     <p>Started: Jun 6, 2024</p>
-                    <p>Last updated: Aug 24, 2025
-                    <p>Latest version: r2.4.4</p>
+                    <p>Last updated: Aug 25, 2025
+                    <p>Latest version: r2.5.0</p>
                     <h4>Button</h4>
                     <p>If you like my website, you can add a button to your own site. Add the code below to your website code.</p>
                     <p style="text-align: left">
@@ -178,7 +188,7 @@
                     </p>
                     <textarea rows="4" cols="65">
 <a href="https://vasekcz230.github.io">
-    <img src="https://vasekcz230.github.io/img/webbuttons/vasekcz230now.gif"/>
+	<img src="https://vasekcz230.github.io/img/webbuttons/vasekcz230now.gif"/>
 </a>
                     </textarea>
                     <h5></h5>
@@ -213,4 +223,5 @@
     </script>
 </body>
 </html>
+
 
