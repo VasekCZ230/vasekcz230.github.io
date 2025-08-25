@@ -92,6 +92,7 @@
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css?v=2.5.0">
     <script src="../js/clock.js" defer></script>
+	<script src="../js/searchbox.js" defer></script>
 </head>
 <body>
     <div id="container">
@@ -150,9 +151,9 @@
 					<iframe src="//incr.easrng.net/badge?key=changeme" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
                     <h5></h5>
                     <img src="../img/packupscale.jpg" width="100%" height="auto">
-					<script async src="https://cse.google.com/cse.js?cx=73d147c751c2d4e64">
-					</script>
-					<div class="gcse-search"></div>
+					<input type="text" id="searchBox" placeholder="Hledej...">
+					<button onclick="searchSite()">Hledat</button>
+					<div id="results"></div>
                 </td>
             </tr>
         </table>
@@ -200,6 +201,7 @@
     </script>
 </body>
 </html>
+
 
 
 
