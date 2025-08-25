@@ -195,13 +195,17 @@
         }
         checkSparkleCursor();
     </script>
-<div id="neko-container"></div>
-    <script>
-        NekoType = "white";
-    </script>
-    <script src="https://webneko.net/n20171213.js"></script>
+	<script>
+	window.addEventListener('load', function() {
+	    NekoType = "white";
+	    var script = document.createElement('script');
+	    script.src = "https://webneko.net/n20171213.js";
+	    document.body.appendChild(script);
+	});
+	</script>
 </body>
 </html>
+
 
 
 
