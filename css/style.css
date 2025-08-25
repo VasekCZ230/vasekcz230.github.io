@@ -24,18 +24,18 @@ body {
     width: 100px;
     background-color: #5c90f3;
     padding: 5px;
-    color: #ccdcf3;
+    color: #eaf5ff;
     vertical-align: top;
 }
 #menu a {
     display: block;
     padding: 8px 0;
-    color: #ccdcf3;
+    color: #eaf5ff;
     text-decoration: none;
 }
 #menu a:hover {
     background-color: #84acf4;
-    color: #ccdcf3;
+    color: #eaf5ff;
 }
 #content {
     padding: 20px;
@@ -45,7 +45,7 @@ body {
 }
 #footer {
     background-color: #4377ed;
-    color: #ccdcf3;
+    color: #eaf5ff;
     text-align: center;
     padding: 10px;
     font-size: 14px;
