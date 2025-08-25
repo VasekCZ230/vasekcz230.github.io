@@ -172,14 +172,12 @@
             planeSound.play();
         });
     </script>
-    <script>
-        function clockPage() {
-            const ampm = document.getElementById("ampm-link").textContent;
-            window.location.href = ampm === "AM"
-                ? "https://vasekcz230.github.io/clock"
-                : "https://www.yout-ube.com/watch?v=dQw4w9WgXcQ";
-        }
-    </script>
+	<script>
+	    function clockPage() {
+	        window.location.href = "https://vasekcz230.github.io/clock";
+	    }
+	    window.onload = clockPage;
+	</script>
     <script>
         function checkSparkleCursor() {
             const currentHour = new Date().getHours();
@@ -195,16 +193,9 @@
         }
         checkSparkleCursor();
     </script>
-	<script>
-	window.addEventListener('load', function() {
-	    NekoType = "white";
-	    var script = document.createElement('script');
-	    script.src = "https://webneko.net/n20171213.js";
-	    document.body.appendChild(script);
-	});
-	</script>
 </body>
 </html>
+
 
 
 
