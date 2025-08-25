@@ -108,10 +108,9 @@
                     <a href="https://vasekcz230.github.io/programs">&bull; Programs</a>
                     <a href="https://vasekcz230.github.io/other">&bull; Other</a>
                     <a href="https://vasekcz230.github.io/about">&bull; About</a>
-                    <p id="currentTime">
-                        <span id="current-time"></span>
-                        <span id="ampm-link" onclick="clockPage()"></span>
-                    </p>
+					<p id="currentTime" style="cursor: pointer;" onclick="window.location.href='https://vasekcz230.github.io/clock';">
+					    <span id="current-time"></span>
+					</p>
                 </td>
                 <td id="content">
                     <div style="text-align: center;">
@@ -172,12 +171,6 @@
             planeSound.play();
         });
     </script>
-	<script>
-	    function clockPage() {
-	        window.location.href = "https://vasekcz230.github.io/clock";
-	    }
-	    window.onload = clockPage;
-	</script>
     <script>
         function checkSparkleCursor() {
             const currentHour = new Date().getHours();
@@ -195,6 +188,7 @@
     </script>
 </body>
 </html>
+
 
 
 
