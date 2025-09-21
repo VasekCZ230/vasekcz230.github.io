@@ -93,24 +93,57 @@
     <link rel="stylesheet" href="../css/style.css?v=2.6.1">
     <script src="../js/clock.js" defer></script>
 	<script src="https://iframe.chat/scripts/main.min.js"></script>
-
-	<style>
-		#chattable {
-		  position: fixed;     /* zůstane přilepený i při scrollu */
-		  bottom: 20px;        /* odsazení od spodku */
-		  right: 20px;         /* odsazení od pravého okraje */
-		  width: 350px;        /* nastav si podle potřeby */
-		  height: 500px;       /* nastav si podle potřeby */
-		  border: none;        /* odstraní rámeček */
-		  z-index: 9999;       /* aby byl vždy nad ostatním obsahem */
-		  border-radius: 10px; /* volitelné, pro hezké zaoblení */
-		  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* stín pro efekt */
-		}
-	</style>
 </head>
 <body>
-	<iframe src="https://iframe.chat/embed?chat=vasekcz230" 
-        id="chattable"></iframe>
+
+<!-- Tlačítko pro otevření chatu -->
+<div id="chat-toggle">💬 Chat</div>
+
+<!-- Iframe chatu -->
+<iframe src="https://iframe.chat/embed?chat=vasekcz230" id="chattable"></iframe>
+
+<style>
+/* Styl pro tlačítko */
+#chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0078ff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 10000;
+  font-family: sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Styl pro iframe (skrytý defaultně) */
+#chattable {
+  position: fixed;
+  bottom: 70px; /* aby iframe byl nad tlačítkem */
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: none; /* schovaný na začátku */
+  z-index: 9999;
+}
+</style>
+
+<script>
+document.getElementById("chat-toggle").onclick = function() {
+  var chat = document.getElementById("chattable");
+  if (chat.style.display === "none" || chat.style.display === "") {
+    chat.style.display = "block";
+  } else {
+    chat.style.display = "none";
+  }
+};
+</script>
+	
     <div id="container">
         <div id="header">
             <h1>Welcome to website of VasekCZ230!</h1>
@@ -206,6 +239,7 @@
     </script>
 </body>
 </html>
+
 
 
 
