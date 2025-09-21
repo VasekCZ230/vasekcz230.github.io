@@ -93,8 +93,24 @@
     <link rel="stylesheet" href="../css/style.css?v=2.6.1">
     <script src="../js/clock.js" defer></script>
 	<script src="https://iframe.chat/scripts/main.min.js"></script>
+
+	<style>
+		#chattable {
+		  position: fixed;     /* zůstane přilepený i při scrollu */
+		  bottom: 20px;        /* odsazení od spodku */
+		  right: 20px;         /* odsazení od pravého okraje */
+		  width: 350px;        /* nastav si podle potřeby */
+		  height: 500px;       /* nastav si podle potřeby */
+		  border: none;        /* odstraní rámeček */
+		  z-index: 9999;       /* aby byl vždy nad ostatním obsahem */
+		  border-radius: 10px; /* volitelné, pro hezké zaoblení */
+		  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* stín pro efekt */
+		}
+	</style>
 </head>
 <body>
+	<iframe src="https://iframe.chat/embed?chat=vasekcz230" 
+        id="chattable"></iframe>
     <div id="container">
         <div id="header">
             <h1>Welcome to website of VasekCZ230!</h1>
@@ -164,7 +180,6 @@
             <a href="https://vasekcz230.github.io/about" style="color: #eaf5ff;">About</a>
         </div>
     </div>
-	<iframe src="https://iframe.chat/embed?chat=vasekcz230" id="chattable"></iframe>
     <audio autoplay><source src="../sfx/startup.mp3" type="audio/mp3"></audio>
     <audio id="planeSound"><source src="../sfx/plane.mp3" type="audio/mp3"></audio>
     <script>
@@ -191,6 +206,7 @@
     </script>
 </body>
 </html>
+
 
 
 
