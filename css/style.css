@@ -13,7 +13,7 @@ body {
     padding: 5px;
 }
 #header {
-    background-color: #4377ed99;
+    background-color: #4377edcc;
     color: #eaf5ff;
     text-align: center;
     padding: 5px;
@@ -22,7 +22,7 @@ body {
 }
 #menu {
     width: 100px;
-    background-color: #5c90f399;
+    background-color: #5c90f3b3;
     padding: 5px;
     color: #eaf5ff;
     vertical-align: top;
@@ -30,11 +30,11 @@ body {
 #menu a {
     display: block;
     padding: 8px 0;
-    color: #eaf5ff99;
+    color: #eaf5ff;
     text-decoration: none;
 }
 #menu a:hover {
-    background-color: #84acf499;
+    background-color: #84acf4b3;
     color: #eaf5ff;
 }
 #content {
@@ -44,7 +44,7 @@ body {
     font-size: 18px;
 }
 #footer {
-    background-color: #4377ed99;
+    background-color: #4377edcc;
     color: #eaf5ff;
     text-align: center;
     padding: 10px;
