@@ -97,14 +97,14 @@
 <body>
 
 <!-- Tlačítko pro otevření chatu -->
-<div id="chat-toggle">💬 Chat</div>
+<div id="chat-widget-toggle">💬 Chat</div>
 
 <!-- Iframe chatu -->
-<iframe src="https://iframe.chat/embed?chat=vasekcz230" id="chattable"></iframe>
+<iframe src="https://iframe.chat/embed?chat=vasekcz230" id="chat-widget-frame"></iframe>
 
 <style>
 /* Styl pro tlačítko */
-#chat-toggle {
+#chat-widget-toggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -113,33 +113,37 @@
   padding: 10px 15px;
   border-radius: 20px;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 99998; /* menší než iframe, větší než zbytek */
   font-family: sans-serif;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Styl pro iframe (skrytý defaultně) */
-#chattable {
+/* Styl pro iframe */
+#chat-widget-frame {
   position: fixed;
-  bottom: 70px; /* aby iframe byl nad tlačítkem */
+  bottom: 70px;
   right: 20px;
   width: 350px;
   height: 500px;
   border: none;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  display: none; /* schovaný na začátku */
-  z-index: 9999;
+  display: none; /* schovaný na startu */
+  z-index: 99999; /* nejvyšší, aby byl nad tlačítkem */
 }
 </style>
 
 <script>
-document.getElementById("chat-toggle").onclick = function() {
-  var chat = document.getElementById("chattable");
+document.getElementById("chat-widget-toggle").onclick = function() {
+  var chat = document.getElementById("chat-widget-frame");
+  var btn = document.getElementById("chat-widget-toggle");
+
   if (chat.style.display === "none" || chat.style.display === "") {
     chat.style.display = "block";
+    btn.textContent = "❌ Zavřít";
   } else {
     chat.style.display = "none";
+    btn.textContent = "💬 Chat";
   }
 };
 </script>
@@ -239,6 +243,7 @@ document.getElementById("chat-toggle").onclick = function() {
     </script>
 </body>
 </html>
+
 
 
 
