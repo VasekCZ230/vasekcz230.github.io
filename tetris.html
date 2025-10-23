@@ -74,7 +74,7 @@
 <html>
 <head>
     <script type='text/javascript'> 
-		title = "VasekCZ230's Website - Clock • ";
+		title = "VasekCZ230's Website - Tetris • ";
 		position = 0;
 		function scrolltitle() {
     		document.title = title.substring(position, title.length) + title.substring(0, position); 
@@ -90,7 +90,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css?v=2.5.0">
+    <link rel="stylesheet" href="../css/style.css?v=2.7.0">
 	<style>
   html, body { margin:0; padding:0; }
   #game-container {
@@ -103,7 +103,7 @@
     box-sizing: border-box;
   }
   #game-canvas {
-    background: rgba(0,0,0,0); /* transparentní pozadí */
+    background: rgba(0,0,0,0);
     border: 4px solid #0066ff;
   }
   canvas { display:block; }
@@ -113,14 +113,14 @@
     color: #00aaff;
     font-family: monospace;
     font-size: 14px;
-    background: #ffffff; /* bílé pozadí */
+    background: rgba(0,0,0,0);
     border: 3px solid #0066ff;
     padding: 5px;
     min-width: 120px;
     height: auto;
   }
   #next-canvas { 
-    background: rgba(0,0,0,0);  /* Fully transparent background */
+    background: rgba(0,0,0,0);
     margin-bottom: 10px;
     border: 2px solid #0066ff;
     width: 60px;
@@ -152,7 +152,7 @@
 <body>
     <div id="container">
         <div id="header">
-            <h1>Clock</h1>
+            <h1>Tetris</h1>
         </div>
         <table cellspacing="0" cellpadding="0">
             <tr>
@@ -184,9 +184,9 @@
                             </div>
                             <div style="margin-top: 10px; font-size: 12px;">
                                 Controls:<br>
-                                [←][→] - Move<br>
-                                [↓] - Down<br>
-                                [↑]/[X] - Rotate<br>
+                                [A][D] - Move<br>
+                                [S] - Down<br>
+                                [W]/[K] - Rotate<br>
                                 [Space] - Pause/Resume
                             </div>
                             <div id="gameover-msg">GAME OVER<br>Press Space to restart</div>
@@ -375,10 +375,10 @@ window.addEventListener('keydown', e => {
     } else paused = !paused;
   }
   if (!running || paused || gameOver) return;
-  if (e.key === 'ArrowLeft' && !collides(piece.shape, piece.x - 1, piece.y)) piece.x--;
-  if (e.key === 'ArrowRight' && !collides(piece.shape, piece.x + 1, piece.y)) piece.x++;
-  if (e.key === 'ArrowDown') drop();
-  if (e.key === 'ArrowUp' || e.key === 'x' || e.key === 'X') {
+  if (e.key === 'a' || e.key === 'A' && !collides(piece.shape, piece.x - 1, piece.y)) piece.x--;
+  if (e.key === 'd' || e.key === 'D' && !collides(piece.shape, piece.x + 1, piece.y)) piece.x++;
+  if (e.key === 's' || e.key === 'S') drop();
+  if (e.key === 'w' || e.key === 'W' || e.key === 'k' || e.key === 'K') {
     const r = rotate(piece.shape);
     if (!collides(r, piece.x, piece.y)) piece.shape = r;
   }
