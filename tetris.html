@@ -232,13 +232,25 @@ const COLORS = ['#00aaff','#33ccff','#0066ff','#3399ff','#66ccff','#0099ff','#00
 let field, piece, nextPiece, score=0, level=1, lines=0, dropTime=1000, lastTime=0;
 let running=false, paused=false, gameOver=false;
 
+const BORDER = 4;
+let OFFSET = BORDER;
+
 function resizeCanvas(){
-  const container = document.getElementById('game-container');
-  const w = container.clientWidth - 120;
-  const h = container.clientHeight;
-  SIZE = Math.min(Math.floor(w / COLS), Math.floor(h / ROWS));
-  canvas.width = COLS * SIZE;
-  canvas.height = ROWS * SIZE;
+    const container = document.getElementById('game-container');
+    const w = container.clientWidth - 120;
+    const h = container.clientHeight;
+
+    SIZE = Math.min(Math.floor((w - BORDER*2) / COLS), Math.floor((h - BORDER*2) / ROWS));
+
+    canvas.width = COLS * SIZE + BORDER*2;
+    canvas.height = ROWS * SIZE + BORDER*2;
+
+    OFFSET = BORDER;
+}
+
+function drawCell(x, y, color) {
+    ctx.fillStyle = color;
+    ctx.fillRect(OFFSET + x * SIZE, OFFSET + y * SIZE, SIZE, SIZE);
 }
 
 window.addEventListener('resize', () => { resizeCanvas(); draw(); drawNext(); });
@@ -250,8 +262,6 @@ function randomPiece(){
   const k = keys[Math.floor(Math.random() * keys.length)];
   return { shape: SHAPES[k].map(r => r.slice()), x: 3, y: 0, color: COLORS[Math.floor(Math.random() * COLORS.length)] };
 }
-
-function drawCell(x, y, color) { ctx.fillStyle = color; ctx.fillRect(x * SIZE, y * SIZE, SIZE, SIZE); }
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
