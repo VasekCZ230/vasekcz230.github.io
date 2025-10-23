@@ -103,14 +103,14 @@
     box-sizing: border-box;
   }
   #game-canvas {
-    background: rgba(0,0,0,0);
+    background: rgba(0,0,0,b3);
     border: 4px solid #0066ff;
   }
   canvas { display:block; }
   #sidebar {
     display: flex;
     flex-direction: column;
-    color: #00aaff;
+    color: #4a4d7c;
     font-family: monospace;
     font-size: 14px;
     background: rgba(0,0,0,0);
@@ -120,7 +120,7 @@
     height: auto;
   }
   #next-canvas { 
-    background: rgba(0,0,0,0);
+    background: rgba(0,0,0,b3);
     margin-bottom: 10px;
     border: 2px solid #0066ff;
     width: 60px;
@@ -187,10 +187,10 @@
                                 [A][D] - Move<br>
                                 [S] - Down<br>
                                 [W]/[K] - Rotate<br>
-                                [Space] - Pause/Resume
+                                [Enter] - Pause/Resume
                             </div>
-                            <div id="gameover-msg">GAME OVER<br>Press Space to restart</div>
-                            <div id="pause-msg">PAUSE<br>Press Space to resume</div>
+                            <div id="gameover-msg">GAME OVER<br>Press Enter to restart</div>
+                            <div id="pause-msg">PAUSE<br>Press Enter to resume</div>
                         </div>
                     </div>
                 </td>
@@ -377,7 +377,7 @@ function update(time = 0) {
 }
 
 window.addEventListener('keydown', e => {
-  if (e.key === ' ') {
+  if (e.key === 'Enter') {
     if (!running) start();
     else if (gameOver) {
       start();
