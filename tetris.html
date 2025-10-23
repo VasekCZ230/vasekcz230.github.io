@@ -385,8 +385,8 @@ window.addEventListener('keydown', e => {
     } else paused = !paused;
   }
   if (!running || paused || gameOver) return;
-  if (e.key === 'a' || e.key === 'A' && !collides(piece.shape, piece.x - 1, piece.y)) piece.x--;
-  if (e.key === 'd' || e.key === 'D' && !collides(piece.shape, piece.x + 1, piece.y)) piece.x++;
+  if ((e.key === 'a' || e.key === 'A') && !collides(piece.shape, piece.x - 1, piece.y)) piece.x--;
+  if ((e.key === 'd' || e.key === 'D') && !collides(piece.shape, piece.x + 1, piece.y)) piece.x++;
   if (e.key === 's' || e.key === 'S') drop();
   if (e.key === 'w' || e.key === 'W' || e.key === 'k' || e.key === 'K') {
     const r = rotate(piece.shape);
