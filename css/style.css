@@ -52,12 +52,11 @@ body {
 }
 
 .news {
+    background: #ccdcf34d;
     width: auto;
     height: 200px;
     padding: 5px;
     overflow-y: scroll;
-    border: 2px solid;
-    border-color: #5c90f380
 }
 
 /* Chrome, Edge, Opera */
