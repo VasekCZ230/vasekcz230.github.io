@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 #container {
     width: 700px;
     margin: 38px auto;
@@ -12,6 +13,7 @@ body {
     border: none;
     padding: 5px;
 }
+
 #header {
     background-color: #4377edb3;
     color: #eaf5ff;
@@ -20,6 +22,7 @@ body {
     font-size: 20px;
     font-style: italic;
 }
+
 #menu {
     width: 100px;
     background-color: #5c90f3b3;
@@ -27,23 +30,65 @@ body {
     color: #eaf5ff;
     vertical-align: top;
 }
+
 #menu a {
     display: block;
     padding: 8px 0;
     color: #eaf5ff;
     text-decoration: none;
 }
-#menu a:hover {
+
+.menu a:hover {
     background-color: #84acf4b3;
     color: #eaf5ff;
 }
-#content {
+
+.content {
     padding: 10px;
     line-height: 1;
     background-color: #ccdcf399;
     color: #4a4d7c;
     font-size: 18px;
 }
+
+.news {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    overflow-y: scroll;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+/* Chrome, Edge, Opera */
+.news::-webkit-scrollbar {
+    width: 8px;
+}
+
+.news::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.news::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.news::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Firefox */
+.news {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.3) rgba(255,255,255,0.05);
+}
+
 #footer {
     background-color: #4377edb3;
     color: #eaf5ff;
@@ -51,6 +96,7 @@ body {
     padding: 10px;
     font-size: 14px;
 }
+
 table {
     width: 100%;
 }
