@@ -56,7 +56,8 @@ body {
     height: 200px;
     padding: 5px;
     overflow-y: scroll;
-    border: 1px solid color: #5c90f380;
+    border: 1px solid;
+    border-color: #5c90f380
 }
 
 /* Chrome, Edge, Opera */
