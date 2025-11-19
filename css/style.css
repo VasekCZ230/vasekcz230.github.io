@@ -56,8 +56,7 @@ body {
     height: 200px;
     padding: 5px;
     overflow-y: scroll;
-
-    border: 1px solid rgba(192, 192, 255, 0.2);
+    border: 1px solid rgba(192, 192, 255, 0.5);
 }
 
 /* Chrome, Edge, Opera */
