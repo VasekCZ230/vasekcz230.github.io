@@ -52,7 +52,7 @@ body {
 }
 
 .news {
-    background: #ccdcf326;
+    background: #ccdcf30d;
     width: auto;
     height: 200px;
     padding: 5px;
@@ -65,22 +65,22 @@ body {
 }
 
 .news::-webkit-scrollbar-track {
-    background: #5c90f30d;
+    background: #4a4d7c0d;
 }
 
 .news::-webkit-scrollbar-thumb {
-    background: #5c90f34d;
+    background: #4a4d7c4d;
     border-radius: 10px;
 }
 
 .news::-webkit-scrollbar-thumb:hover {
-    background: #5c90f380;
+    background: #4a4d7c80;
 }
 
 /* Firefox */
 .news {
     scrollbar-width: thin;
-    scrollbar-color: #5c90f34d #5c90f30d;
+    scrollbar-color: #4a4d7c4d #4a4d7c0d;
 }
 
 #footer {
