@@ -1,5 +1,5 @@
 var winterStartDay = 1;
-var winterStartMonth = 10;  // 0 = january  -  11 = december
+var winterStartMonth = 11;  // 0 = january  -  11 = december
 
 var winterEndDay = 28;
 var winterEndMonth = 1;
