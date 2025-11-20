@@ -1,8 +1,7 @@
-<script>
 var winterStartDay = 1;
 var winterStartMonth = 10;  // 0 = january  -  11 = december
 
-var winterEndDay = 28; 
+var winterEndDay = 28;
 var winterEndMonth = 1;
 
 var now = new Date();
@@ -71,7 +70,8 @@ if (now >= startDate && now <= endDate) {
         flks[i].style.zIndex=(over_or_under=="over")?"1001":"0";
         boddie.appendChild(flks[i]);
       }
-      setInterval("let_it_snow()", speed);
+      // pass function reference instead of string
+      setInterval(let_it_snow, speed);
     }}
 
     function createDiv(height, width, colour) {
@@ -149,4 +149,3 @@ if (now >= startDate && now <= endDate) {
       if (z || o>flakes*slush) set_width();
     }
 }
-</script>
