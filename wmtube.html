@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WMTube</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #ffffff;
+    margin: 0;
+}
+
+.header {
+    background: #cc0000;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search {
+    padding: 8px;
+    background: #f2f2f2;
+}
+
+.video {
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+}
+
+.video img {
+    float: left;
+    margin-right: 8px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.copybox {
+    width: 98%;
+    font-size: 11px;
+}
+
+.player {
+    margin: 10px;
+    text-align: center;
+}
+
+.clear { clear: both; }
+</style>
+
+<script type="text/javascript">
+
+var API_KEY = "AIzaSyCDyeTfilIDyXGzbk5shrFs__RUSsOM__s";
+
+function searchVideos() {
+
+    var q = document.getElementById("query").value;
+    if (!q) return;
+
+    var url = "https://www.googleapis.com/youtube/v3/search"
+        + "?part=snippet"
+        + "&type=video"
+        + "&maxResults=5"
+        + "&q=" + encodeURIComponent(q)
+        + "&key=" + API_KEY;
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var data = JSON.parse(xhr.responseText);
+            showResults(data);
+        }
+    };
+
+    xhr.open("GET", url, true);
+    xhr.send();
+}
+
+function showResults(data) {
+
+    var output = "";
+
+    for (var i = 0; i < data.items.length; i++) {
+
+        var vid = data.items[i].id.videoId;
+        var title = data.items[i].snippet.title;
+        var thumb = data.items[i].snippet.thumbnails.default.url;
+        var watchUrl = "https://www.youtube.com/watch?v=" + vid;
+
+        output += "<div class='video'>";
+        output += "<img src='" + thumb + "'>";
+        output += "<div class='title'>" + title + "</div>";
+        output += "<div><a href='#' onclick=\"playVideo('" + vid + "')\">Přehrát zde</a></div>";
+        output += "<div>Kopírovat odkaz:</div>";
+        output += "<input class='copybox' type='text' value='" + watchUrl + "'>";
+        output += "<div class='clear'></div>";
+        output += "</div>";
+    }
+
+    document.getElementById("results").innerHTML = output;
+}
+
+function playVideo(videoId) {
+
+    var embedUrl = "https://www.youtube.com/embed/" + videoId;
+
+    var html = "<iframe width='300' height='200' "
+        + "src='" + embedUrl + "' "
+        + "frameborder='0'></iframe>";
+
+    document.getElementById("player").innerHTML = html;
+}
+
+</script>
+</head>
+
+<body>
+
+<div class="header">WMTube</div>
+
+<div class="search">
+<input type="text" id="query" placeholder="Hledat video">
+<input type="button" value="Hledat" onclick="searchVideos()">
+</div>
+
+<div id="player" class="player"></div>
+
+<div id="results"></div>
+
+</body>
+</html>
